@@ -1,1 +1,1 @@
-# soap_to_rest-deploy
+# Deploy for soap-to-rest service
