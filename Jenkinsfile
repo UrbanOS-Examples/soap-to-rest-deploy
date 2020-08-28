@@ -23,7 +23,6 @@ node ('infrastructure') {
     ansiColor('xterm') {
         scos.doCheckoutStage()
 
-
         doStageIfDeployingToDev('Deploy to Dev') {
             deployTo(environment: 'dev', extraArgs: "--set image.tag=${env.DEV_IMAGE_TAG} --set image.pullPolicy=Always --recreate-pods")
         }
@@ -43,8 +42,6 @@ node ('infrastructure') {
 def deployTo(params = [:]) {
     def environment = params.get('environment')
     if (environment == null) throw new IllegalArgumentException("environment must be specified")
-
-    def internal = params.get('internal', true)
     def extraArgs = params.get('extraArgs', '')
 
     scos.withEksCredentials(environment) {
