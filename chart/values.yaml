@@ -6,6 +6,8 @@ deploy:
   updateStrategy:
       type: RollingUpdate
 
+replicaCount: 1
+
 image:
   repository: smartcitiesdata/soap-to-rest
   tag: development

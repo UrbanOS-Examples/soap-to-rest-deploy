@@ -52,7 +52,7 @@ def deployTo(params = [:]) {
             set -e
             helm init --client-only
             helm upgrade --install soap-to-rest ./chart \
-                --namespace=vendor-resources \
+                --namespace=external-services \
                 --values=soap-to-rest.yaml \
                 ${extraArgs}
         """.trim())
