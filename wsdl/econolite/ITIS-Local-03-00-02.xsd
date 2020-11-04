@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Output of XML portions of the registry data into file: ITIS-Local-03-00-02.xsd -->
+<!-- Run on Mini-Edit [Version 2.1.441] -->
+<!-- From node C:136-5448-3969 Created on 10/20/2006 at 3:47:07 PM  -->
+<!-- Source DB File: ITIS_Rev03_00_02.ITS rendered into namespace: ITIS-Local  -->
+<!-- Production releases of ITS schemas can be found at: http://www.itsware.net/ITSschemas/ReadMe.htm -->
+<!--  -->
+<xs:schema xmlns="http://www.ITIS-Local-03-00-02" xmlns:tns="http://www.ITIS-Local-03-00-02" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ITIS-Local-03-00-02" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="Adopted">
+	<xs:annotation>
+		<xs:documentation>
+      Exported on: 03:47:07 PM Friday, October 20, 2006 From file: ITIS_Rev03_00_02.ITS [By: Mini-Edit Rev 2.1.441] 
+			TMDD V3.03d Standard - Approved Standard
+			Last Updated: December 15, 2016 - Patrick Chan, ConSysTec
+   </xs:documentation>
+	</xs:annotation>
+	<!-- Descriptive Name: DE_Accidents-and-Incidents-Local -->
+	<xs:simpleType name="AccidentsAndIncidents">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Instructions-Mandatory-Local -->
+	<xs:simpleType name="AdviceInstructionsMandatory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Instructions-Recommendations-Local -->
+	<xs:simpleType name="AdviceInstructionsRecommendations">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Alternate-Route-Local -->
+	<xs:simpleType name="AlternateRoute">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Asset-Status-Local -->
+	<xs:simpleType name="AssetStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Closures-Road-and-Lane-Local -->
+	<xs:simpleType name="Closures">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Delays,-Status,-And-Cancellations-Local -->
+	<xs:simpleType name="DelayStatusCancellation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Device-And-Equipment-Status-Local -->
+	<xs:simpleType name="DeviceStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Disasters-Local -->
+	<xs:simpleType name="Disasters">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Disturbances-Local -->
+	<xs:simpleType name="Disturbances">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Generic-Locations-Local -->
+	<xs:simpleType name="GenericLocations">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Incident-Response-Equipment-Local -->
+	<xs:simpleType name="IncidentResponseEquipment">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Incident-Response-Status-Local -->
+	<xs:simpleType name="IncidentResponseStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_ITIS-Local -->
+	<xs:simpleType name="ITIScodes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Lane-Roadway-Descriptions-Local -->
+	<xs:simpleType name="LaneRoadway">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Mobile-Situation-Local -->
+	<xs:simpleType name="MobileSituation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Objects-Local -->
+	<xs:simpleType name="Objects">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Obstructions-Local -->
+	<xs:simpleType name="Obstruction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Parking-Information-Local -->
+	<xs:simpleType name="ParkingInformation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Pavement-Conditions-Local -->
+	<xs:simpleType name="PavementConditions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Precipitation-Local -->
+	<xs:simpleType name="Precipitation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Qualifiers-Local -->
+	<xs:simpleType name="Qualifiers">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Responder-Group-Affected-Local -->
+	<xs:simpleType name="ResponderGroupAffected">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Restrictions-Local -->
+	<xs:simpleType name="RestrictionClass">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Roadside-Assets-Local -->
+	<xs:simpleType name="RoadsideAssets">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Roadwork-Local -->
+	<xs:simpleType name="Roadwork">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Special-Events-Local -->
+	<xs:simpleType name="SpecialEvents">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Sporting-Events-Local -->
+	<xs:simpleType name="SportingEvents">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Suggestion-Advice-Local -->
+	<xs:simpleType name="SuggestionAdvice">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Information-System-Local -->
+	<xs:simpleType name="SystemInformation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Temperature-Local -->
+	<xs:simpleType name="Temperature">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Traffic-Conditions-Local -->
+	<xs:simpleType name="TrafficConditions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Transit-Mode-Local -->
+	<xs:simpleType name="TransitMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Transit-Operations-Local -->
+	<xs:simpleType name="TransitOperations">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Traveler-Group-Affected-Local -->
+	<xs:simpleType name="TravelerGroupAffected">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Unit-Values-Local -->
+	<xs:simpleType name="Units">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Unusual-Driving-Local -->
+	<xs:simpleType name="UnusualDriving">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Vehicle-Groups-Affected-Local -->
+	<xs:simpleType name="VehicleGroupAffected">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Visibility-andampampamp-Air-Quality-Local -->
+	<xs:simpleType name="VisibilityAndAirQuality">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Warning-Advice-Local -->
+	<xs:simpleType name="WarningAdvice">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Weather-Conditions-Local -->
+	<xs:simpleType name="WeatherConditions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Winds-Local -->
+	<xs:simpleType name="Winds">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Winter-Driving-Index-Local -->
+	<xs:simpleType name="WinterDrivingIndex">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: DE_Winter-Driving-Restrictions-and-Recommendations-Local -->
+	<xs:simpleType name="WinterDrivingRestrictions">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="insert-local-values-here"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- END of the output -->
+</xs:schema>

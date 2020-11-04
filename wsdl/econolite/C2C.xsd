@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Patrick Chan (Consensus Systems Technologies) -->
+<!-- TMDD V3.03d - NTCIP 2306 C2C Support XML Schema -->
+<!-- Modeled after NTCIP 2306 - Message Administration Messages -->
+<xs:schema xmlns="http://www.ntcip.org/c2c-message-administration" xmlns:tns="http://www.ntcip.org/c2c-message-administration" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ntcip.org/c2c-message-administration" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="Adopted">
+	<xs:annotation>
+		<xs:documentation>
+			TMDD V3.03d Standard - Approved Standard
+			Last Updated: December 15, 2016 - Patrick Chan, ConSysTec
+	   </xs:documentation>
+	</xs:annotation>
+	<!-- Descriptive Name: AuthorizationSet -->
+	<xs:complexType name="AuthorizationSet">
+		<xs:sequence>
+			<xs:element name="user-id" type="Security-user-name"/>
+			<xs:element name="password" type="Security-password"/>
+			<xs:element name="hashtime" type="DateTimePair"/>
+			<xs:element name="hash">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="10"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: BroadcastAlerts -->
+	<xs:complexType name="BroadcastAlerts">
+		<xs:sequence maxOccurs="2">
+			<xs:element name="broadcastAlert" type="BroadcastAlertsItem"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: BroadcastAlertsItem -->
+	<xs:simpleType name="BroadcastAlertsItem">
+		<xs:annotation>
+			<xs:appinfo>
+            reserved (0)
+            broadcastAlertsAccepted (1)
+            broadcastAlertsNotAccepted (2)
+         </xs:appinfo>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedInt">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="2"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="reserved"/>
+					<xs:enumeration value="broadcastAlertsAccepted"/>
+					<xs:enumeration value="broadcastAlertsNotAccepted"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- Descriptive Name: C2CMessagePublication -->
+	<xs:element name="c2cMessagePublication" type="C2cMessagePublication"/>
+	<xs:complexType name="C2cMessagePublication">
+		<xs:sequence>
+			<xs:element name="informationalText" type="InformationalText" minOccurs="0"/>
+			<xs:element name="subscriptionID" type="SubscriptionID"/>
+			<xs:element name="subscriptionName" type="SubscriptionName" minOccurs="0"/>
+			<xs:element name="subscriptionFrequency" type="SubscriptionFrequency" minOccurs="0"/>
+			<xs:element name="subscriptionCount" type="SubscriptionCount"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: C2CMessageReceipt -->
+	<xs:element name="c2cMessageReceipt" type="C2cMessageReceipt"/>
+	<xs:complexType name="C2cMessageReceipt">
+		<xs:sequence>
+			<xs:element name="informationalText" type="InformationalText"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: C2CMessageSubscription -->
+	<xs:element name="c2cMessageSubscription" type="C2cMessageSubscription"/>
+	<xs:complexType name="C2cMessageSubscription">
+		<xs:sequence>
+			<xs:element name="informationalText" type="InformationalText" minOccurs="0"/>
+			<xs:element name="returnAddress" type="ReturnAddress"/>
+			<xs:element name="subscriptionAction" type="SubscriptionAction"/>
+			<xs:element name="subscriptionType" type="SubscriptionType"/>
+			<xs:element name="subscriptionID" type="SubscriptionID"/>
+			<xs:element name="subscriptionName" type="SubscriptionName" minOccurs="0"/>
+			<xs:element name="subscriptionTimeFrame" type="SubscriptionTimeFrame" minOccurs="0"/>
+			<xs:element name="subscriptionFrequency" type="SubscriptionFrequency"/>
+			<xs:element name="broadcastAlerts" type="BroadcastAlerts" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: DateTimePair -->
+	<xs:simpleType name="DateTimePair">
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	<!-- InformationalText -->
+	<xs:simpleType name="InformationalText">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: ReturnAddress -->
+	<xs:simpleType name="ReturnAddress">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="128"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SECURITY_Password_text -->
+	<xs:simpleType name="Security-password">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SECURITY_UserName_text -->
+	<xs:simpleType name="Security-user-name">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SubscriptionAction -->
+	<xs:complexType name="SubscriptionAction">
+		<xs:sequence maxOccurs="10">
+			<xs:element name="subscriptionAction-item" type="SubscriptionActionItem"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: SubscriptionActionItem -->
+	<xs:simpleType name="SubscriptionActionItem">
+		<xs:annotation>
+			<xs:appinfo>
+            reserved (0)
+            newSubscription (1)
+            replaceSubscription (2)
+            cancelSubscription (3)
+            cancelAllPriorSubscriptions (4)
+         </xs:appinfo>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedInt">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="4"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="reserved"/>
+					<xs:enumeration value="newSubscription"/>
+					<xs:enumeration value="replaceSubscription"/>
+					<xs:enumeration value="cancelSubscription"/>
+					<xs:enumeration value="cancelAllPriorSubscriptions"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- Descriptive Name: SubscriptionCount -->
+	<xs:simpleType name="SubscriptionCount">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SubscriptionFrequency -->
+	<xs:simpleType name="SubscriptionFrequency">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SubscriptionID -->
+	<xs:simpleType name="SubscriptionID">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="128"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: SubscriptionName -->
+	<xs:simpleType name="SubscriptionName">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="128"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Descriptive Name: C2C_SubscriptionTimeFrame -->
+	<xs:complexType name="SubscriptionTimeFrame">
+		<xs:sequence>
+			<xs:element name="start" type="DateTimePair"/>
+			<xs:element name="end" type="DateTimePair"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: SubscriptionType -->
+	<xs:complexType name="SubscriptionType">
+		<xs:sequence>
+			<xs:element name="subscriptionType-item" type="SubscriptionTypeItem"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Descriptive Name: SubscriptionTypeItem -->
+	<xs:simpleType name="SubscriptionTypeItem">
+		<xs:annotation>
+			<xs:appinfo>
+            reserved (0)
+            oneTime (1)
+            periodic (2)
+            onChange (3)
+         </xs:appinfo>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedInt">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="reserved"/>
+					<xs:enumeration value="oneTime"/>
+					<xs:enumeration value="periodic"/>
+					<xs:enumeration value="onChange"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+</xs:schema>

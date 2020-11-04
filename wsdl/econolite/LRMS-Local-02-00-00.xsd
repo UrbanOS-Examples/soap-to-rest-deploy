@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Output of XML portions of the registry data into file: LRMS-Local-02-00-00.xsd -->
+<!-- Run on Mini-Edit [Version 2.1.442] -->
+<!-- From node C:136-5448-3969 Created on 11/14/2006 at 12:31:45 PM  -->
+<!-- Source DB File: lrms_adopted-2-0-0.ITS rendered into namespace: LRMS-Local  -->
+<!-- Place at: www.YourSite.xxx/ITSschemas/LRMS-02-00-00/lrms-local-02-00-00.xsd  -->
+<!-- Local copy saved to: C:/Documents and Settings/DavidK/My Documents/code/MiniEdit/ITSschemas/LRMS-02-00-00/lrms-local-02-00-00.xsd -->
+<!-- Production releases of ITS schemas can be found at: http://www.ITSware.net/XML/readme.htm -->
+ 
+ 
+<!--  --> 
+<xs:schema targetNamespace="http://www.LRMS-Local-02-00-00" 
+   xmlns="http://www.LRMS-Local-02-00-00" 
+   xmlns:tns="http://www.LRMS-Local-02-00-00" 
+   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+   
+
+   elementFormDefault="unqualified" 
+   attributeFormDefault="unqualified" 
+   version="DRAFT">
+<!-- add for each space you define: xmlns:$NAME$="http://www.$NAME$-$RELEASE_TYPE$-$REVISION_STRING$ -->
+ 
+ 
+<xs:annotation>
+   <xs:documentation>
+      Exported on: 12:31:45 PM Tuesday, November 14, 2006 From file: lrms_adopted-2-0-0.ITS [By: Mini-Edit Rev 2.1.442] 
+   </xs:documentation>
+</xs:annotation>
+ 
+
+ 
+<!-- Descriptive Name: AdminAreaGroupframe-Local -->
+<xs:complexType name="AdminAreaGroup">
+   <xs:sequence>
+      <xs:element name="yourName"  minOccurs="0">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:element>
+      <!-- Insert instance name and Type of each elements here, 
+           and any restrictions that are needed. -->
+   </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: Gridframe-Local -->
+<xs:complexType name="Grid" >
+      <xs:sequence>
+         <xs:element name="yourName"  minOccurs="0">
+            <xs:simpleType>
+               <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+         </xs:element>
+         <!-- Insert instance name and Type of each elements here,
+         and any restrictions that are needed. -->
+      </xs:sequence>
+</xs:complexType>
+
+<!-- Descriptive Name: GridProfile-Local -->
+<xs:complexType name="GridProfile" >
+      <xs:sequence>
+         <xs:element name="yourName"  minOccurs="0">
+            <xs:simpleType>
+               <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+         </xs:element>
+         <!-- Insert instance name and Type of each elements here,
+         and any restrictions that are needed. -->
+      </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: GridPointframe-Local -->
+<xs:complexType name="GridPoint">
+   <xs:sequence>
+      <xs:element name="yourName"  minOccurs="0">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:element>
+      <!-- Insert instance name and Type of each elements here, 
+           and any restrictions that are needed. -->
+   </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: GridPointPairframe-Local -->
+<xs:complexType name="GridPointPair">
+   <xs:sequence>
+      <xs:element name="yourName"  minOccurs="0">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:element>
+      <!-- Insert instance name and Type of each elements here, 
+           and any restrictions that are needed. -->
+   </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: GridPointSequenceframe-Local -->
+<xs:complexType name="GridPointSequence">
+   <xs:sequence>
+      <xs:element name="yourName"  minOccurs="0">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:element>
+      <!-- Insert instance name and Type of each elements here, 
+           and any restrictions that are needed. -->
+   </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: HorizontalDatumcd-Local -->
+<xs:simpleType name="HorizontalDatum">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="insert-local-values-here"/>
+   </xs:restriction>
+</xs:simpleType>
+ 
+<!-- Descriptive Name: LRReferenceMethodcd-Local -->
+<xs:simpleType name="LRMethod">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="insert-local-values-here"/>
+   </xs:restriction>
+</xs:simpleType>
+ 
+<!-- Descriptive Name: NodeAttributeframe-Local -->
+<xs:complexType name="NodeAttribute">
+   <xs:sequence>
+      <xs:element name="yourName"  minOccurs="0">
+         <xs:simpleType>
+            <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:element>
+      <!-- Insert instance name and Type of each elements here, 
+           and any restrictions that are needed. -->
+   </xs:sequence>
+</xs:complexType>
+ 
+<!-- Descriptive Name: PointType-Local -->
+<xs:simpleType name="PointType">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="insert-local-values-here"/>
+   </xs:restriction>
+</xs:simpleType>
+
+<!-- Descriptive Name: ExtendedPointType-Local -->
+<xs:simpleType name="ExtendedPointType">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="insert-local-values-here"/>
+   </xs:restriction>
+</xs:simpleType>
+ 
+<!-- Descriptive Name: VerticalDatumcd-Local -->
+<xs:simpleType name="VerticalDatum">
+   <xs:restriction base="xs:string">
+      <xs:enumeration value="insert-local-values-here"/>
+   </xs:restriction>
+</xs:simpleType>
+  
+
+</xs:schema>
+

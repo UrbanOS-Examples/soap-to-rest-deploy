@@ -1,0 +1,2330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Patrick Chan (Consensus Systems Technologies) -->
+<!-- TMDD V3.03 Reference to NTCIP 1200 Series Standards -->
+<xs:schema xmlns="http://www.ntcip.org/c2f-object-references" xmlns:tns="http://www.ntcip.org/c2f-object-references" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ntcip.org/c2f-object-references" elementFormDefault="unqualified" attributeFormDefault="unqualified" version="Adopted">
+	<xs:annotation>
+		<xs:documentation>
+			TMDD V3.03d Standard - Approved Standard
+			Last Updated: December 15, 2016 - Patrick Chan, ConSysTec
+   </xs:documentation>
+	</xs:annotation>
+	<!-- *******************-->
+	<!-- NTCIP 1201 v02.32-->
+	<xs:simpleType name="TimeBaseScheduleNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimeBaseScheduleMonth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="TimeBaseScheduleDay">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="TimeBaseScheduleDate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt"/>
+	</xs:simpleType>
+	<xs:simpleType name="TimeBaseScheduleDayPlan">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="DayPlanHour">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="23"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DayPlanMinute">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Global</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="59"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- *******************-->
+	<!-- NTCIP 1202 v02.19f -->
+	<xs:simpleType name="CoordCycleStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="510"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CoordSyncStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="510"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OverlapNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>overlap</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OverlapStatusGroupNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="OverlapStatusGroupGreens">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="OverlapStatusGroupReds">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="OverlapStatusGroupYellows">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PatternCycleTime">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PatternOffsetTime">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupDontWalks">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupGreens">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupPedClears">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupReds">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupWalks">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseStatusGroupYellows">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>group</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PhaseNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>phase</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RingStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="SplitCoordPhase">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SplitTime">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="SplitMode">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other"/>
+					<xs:enumeration value="none"/>
+					<xs:enumeration value="minimumVehicleRecall"/>
+					<xs:enumeration value="maximumVehicleRecall"/>
+					<xs:enumeration value="pedestrianRecall"/>
+					<xs:enumeration value="maximumVehicleAndPedestrianRecall"/>
+					<xs:enumeration value="phaseOmitted"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="SpecialFunctionOutputNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units>output</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TimebaseAscPatternSync">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>IntersectionSignal</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>minute</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<!-- *******************-->
+	<!-- NTCIP 1203 v02.39b-->
+	<xs:simpleType name="DefaultFont">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FontNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FontHeight">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="FontCharSpacing">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="FontLineSpacing">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="FontVersionID">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="FontStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="11"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="notUsed"/>
+					<xs:enumeration value="modifying"/>
+					<xs:enumeration value="calculatingID"/>
+					<xs:enumeration value="readyForUse"/>
+					<xs:enumeration value="inUse"/>
+					<xs:enumeration value="permanent"/>
+					<xs:enumeration value="modifyReq"/>
+					<xs:enumeration value="Req"/>
+					<xs:enumeration value="notUsedReq"/>
+					<xs:enumeration value="unmanagedReq"/>
+					<xs:enumeration value="unmanaged"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="CharacterNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CharacterWidth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="CharacterBitmap">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMaxNumberPages">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>page</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMaxMultiStringLength">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>byte</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsColorScheme">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="4"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="monochrome1bit"/>
+					<xs:enumeration value="monochrome8bit"/>
+					<xs:enumeration value="colorClassic"/>
+					<xs:enumeration value="color24bit"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMsgSourceMode">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="14"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other"/>
+					<xs:enumeration value="local"/>
+					<xs:enumeration value="external"/>
+					<xs:enumeration value="otherCom1 (retired)"/>
+					<xs:enumeration value="otherCom2 (retired)"/>
+					<xs:enumeration value="otherCom3 (retired)"/>
+					<xs:enumeration value="otherCom4 (retired)"/>
+					<xs:enumeration value="central"/>
+					<xs:enumeration value="timebasedScheduler"/>
+					<xs:enumeration value="powerRecovery"/>
+					<xs:enumeration value="reset"/>
+					<xs:enumeration value="commLoss"/>
+					<xs:enumeration value="powerLoss"/>
+					<xs:enumeration value="endDuration"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsSignType">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other"/>
+					<xs:enumeration value="bos"/>
+					<xs:enumeration value="cms"/>
+					<xs:enumeration value="vmsChar"/>
+					<xs:enumeration value="vmsLine"/>
+					<xs:enumeration value="vmsFull"/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value=""/>
+					<xs:enumeration value="portableOther"/>
+					<xs:enumeration value="portableBOS"/>
+					<xs:enumeration value="portableCMS"/>
+					<xs:enumeration value="portableVMSChar"/>
+					<xs:enumeration value="portableVMSLine"/>
+					<xs:enumeration value="portableVMSFull"/>
+					<!-- Reserved - 7 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 10 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 20 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 30 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 40 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 50 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 60 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 70 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 80 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 90 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 100 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 110 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 120 -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved -->
+					<!-- Reserved - 128 -->
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsSupportedMultiTags">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageMultiString">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>txt</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageBeacon">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMsgTableSource">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="8"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="notUsed"/>
+					<xs:enumeration value="modifying"/>
+					<xs:enumeration value="validating"/>
+					<xs:enumeration value="valid"/>
+					<xs:enumeration value="error"/>
+					<xs:enumeration value="modifyReq"/>
+					<xs:enumeration value="validateReq"/>
+					<xs:enumeration value="notUsedReq"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageMemoryType">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other (retired)"/>
+					<xs:enumeration value="permanent"/>
+					<xs:enumeration value="changeable"/>
+					<xs:enumeration value="volatile"/>
+					<xs:enumeration value="currentBuffer"/>
+					<xs:enumeration value="schedule"/>
+					<xs:enumeration value="blank"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsSignTechnology">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsBeaconType">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="13"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other"/>
+					<xs:enumeration value="none"/>
+					<xs:enumeration value="oneBeacon"/>
+					<xs:enumeration value="twoBeaconSyncFlash"/>
+					<xs:enumeration value="twoBeaconsOppFlash"/>
+					<xs:enumeration value="fourBeaconSyncFlash"/>
+					<xs:enumeration value="fourBeaconAltRowFlash"/>
+					<xs:enumeration value="fourBeaconAltColumnFlash"/>
+					<xs:enumeration value="fourBeaconAltDiagonalFlash"/>
+					<xs:enumeration value="fourBeaconNoSyncFlash"/>
+					<xs:enumeration value="oneBeaconStrobe"/>
+					<xs:enumeration value="twoBeaconStrobe"/>
+					<xs:enumeration value="fourBeaconStrobe"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageRunTimePriority">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageTimeRemaining">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>minute</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsSignHeightPixels">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsSignWidthPixels">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsSignHeight">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsSignWidth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsCharacterHeightPixels">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsCharacterWidthPixels">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>pixel</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsVerticalBorder">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsHorizontalBorder">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsHorizontalPitch">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="VmsVerticalPitch">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageCRC">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="DmsMessageNumber">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>DMS</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<!-- *******************-->
+	<!-- NTCIP 1204  v02-24r -->
+	<!-- EssNtcipIdentification  OBJECT IDENTIFIER ::= {essNtcip 1 } -->
+	<xs:simpleType name="EssNtcipCategory">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="4"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="other"/>
+					<xs:enumeration value="permanent"/>
+					<xs:enumeration value="transportable"/>
+					<xs:enumeration value="mobile"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="EssTypeofStation">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssDoorStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssBatteryStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>pct</valueDomainTerm>
+				<units>Percent</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="101"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssLineVolts">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>2 volts root mean squared (Vrms)</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssWeatherBlock">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<!-- EssNtcipHeight OBJECT IDENTIFIER ::= {essNtcip 3 } -->
+	<xs:simpleType name="EssReferenceHeight">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>meters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-400"/>
+			<xs:maxInclusive value="8001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssAtmosphericPressure">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>Decapascal</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<!-- EssNtcipWind OBJECT IDENTIFIER ::= {essNtcip 4 } -->
+	<!-- Note: The following two objects, essAvgWindDirection and essAvgWindspeed were deprecated and replaced with new objects in NTCIP 1204 v02-24r, however, implementations are allowed to support these original objects for backwards
+	compatibility purposes.  -->
+	<xs:simpleType name="EssAvgWindDirection">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>degrees</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="361"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssAvgWindSpeed">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>tenths of meters per second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<!-- EssNtcipTemperature OBJECT IDENTIFIER ::= {essNtcip 5} -->
+	<xs:simpleType name="EssAirTemperature">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssDewpointTemp">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssMaxTemp">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssMinTemp">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- EssNtcipPrecip OBJECT IDENTIFIER ::= {essNtcip 6 } -->
+	<xs:simpleType name="EssRelativeHumidity">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>pct</valueDomainTerm>
+				<units>percent humidity</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="101"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Note: The following object, essWaterDepth was deprecated and replaced with new objects in NTCIP 1204 v02-24r, however, implementations are allowed to support this original object for backwards compatibility purposes.  -->
+	<xs:simpleType name="EssWaterDepth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>centimeters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssAdjacentSnowDepth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>centimeters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="3001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssRoadwaySnowDepth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>centimeters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="3001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssRoadwaySnowPackDepth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>centimeters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort">
+			<xs:maxInclusive value="3001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssPrecipRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>tenths of grams per square meter per second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssSnowfallAccumRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>10^-7 meters per second</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssIceThickness">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeters</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<!-- EssNtcipRadiation  OBJECT IDENTIFIER ::= {essNtcip 7} -->
+	<!-- EssNtcipVisibility  OBJECT IDENTIFIER ::= {essNtcip 8 } -->
+	<xs:simpleType name="EssVisibility">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>one tenth of a meter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt">
+			<xs:maxInclusive value="1000001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- EssNtcipPavement  OBJECT IDENTIFIER ::= {essNtcip 9} -->
+	<xs:simpleType name="EssSurfaceTemperature">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssPavementTemperature">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Note: The following object, essSurfaceWaterDepth was deprecated and replaced with a new object in NTCIP 1204 v02-24r, however, implementations are allowed to support this original object for backwards compatibility purposes.  -->
+	<xs:simpleType name="EssSurfaceWaterDepth">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>millimeter</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssSurfaceSalinity">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>parts per one hundred thousand by weight</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssSurfaceFreezePoint">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>tenths of degrees Celsius</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:short">
+			<xs:minInclusive value="-1000"/>
+			<xs:maxInclusive value="1001"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EssPavementBlock">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="EssSubSurfaceData">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<!-- EssNtcipMobile  OBJECT IDENTIFIER ::= {essNtcip 10} -->
+	<xs:simpleType name="EssMobileFriction">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>ESS</objectClass>
+				<valueDomainTerm>pct</valueDomainTerm>
+				<units>percent friction</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:maxInclusive value="101"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- EssNtcipTreatment OBJECT IDENTIFIER ::= { essNtcip 11 } -->
+	<!-- EssNtcipAirQuality  OBJECT IDENTIFIER ::= { essNtcip 12 } -->
+	<!-- EssNtcipWaterQuality OBJECT IDENTIFIER ::= { essNtcip 13 } – reserved for future use -->
+	<!-- EssNtcipSnapshot  OBJECT IDENTIFIER ::= { essNtcip 14 } -->
+	<!-- NTCIP 1205 v01.08 -->
+	<xs:simpleType name="RangePanLeftLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>hundredths of a degree</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangePanRightLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>hundredths of a degree</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangeTiltUpLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>hundredths of a degree</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangeTiltDownLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>hundredths of a degree</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangeZoomLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangeFocusLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RangeIrisLimit">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="PresetGotoPosition">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>nbr</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="PositionFocusLens">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionIrisLens">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionTilt">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionPan">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionZoomLens">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SystemCameraEquipped">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SystemCameraFeatureControl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SystemCameraFeatureStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>CCTV</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- NTCIP 1207 v01.17a -->
+	<xs:simpleType name="RmcAbsoluteMinMeterRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcAbsoluteMaxMeterRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcSystemMinMeterRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcSystemMaxMeterRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcManualPlan">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcManualRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcAverageFlowRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcAverageOccupancy">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>pct</valueDomainTerm>
+				<units>tenths of a percent</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcAverageSpeed">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>kilometers per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcDemandStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="recalled"/>
+					<xs:enumeration value="working"/>
+					<xs:enumeration value="otherError"/>
+					<xs:enumeration value="erraticCount"/>
+					<xs:enumeration value="maxPresence"/>
+					<xs:enumeration value="noActivity"/>
+					<xs:enumeration value="errorAtSensor"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcQueueStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="disabled"/>
+					<xs:enumeration value="working"/>
+					<xs:enumeration value="otherError"/>
+					<xs:enumeration value="erraticCount"/>
+					<xs:enumeration value="maxPresence"/>
+					<xs:enumeration value="noActivity"/>
+					<xs:enumeration value="errorAtSensor"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcPassageStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="7"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="recalled"/>
+					<xs:enumeration value="working"/>
+					<xs:enumeration value="otherError"/>
+					<xs:enumeration value="erraticCount"/>
+					<xs:enumeration value="maxPresence"/>
+					<xs:enumeration value="noActivity"/>
+					<xs:enumeration value="errorAtSensor"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcOperMaxMeterRateStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcOperMinMeterRateStatus">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcRequestCommandSource">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="manual"/>
+					<xs:enumeration value="communications"/>
+					<xs:enumeration value="interconnect"/>
+					<xs:enumeration value="timebaseControl"/>
+					<xs:enumeration value="default"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcImplementCommandSource">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="manual"/>
+					<xs:enumeration value="communications"/>
+					<xs:enumeration value="interconnect"/>
+					<xs:enumeration value="timebaseControl"/>
+					<xs:enumeration value="default"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcRequestAction">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="dark"/>
+					<xs:enumeration value="restInGreen"/>
+					<xs:enumeration value="fixedRate"/>
+					<xs:enumeration value="trafficResponsive"/>
+					<xs:enumeration value="emergencyGreen"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcRequestPlan">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcRequestRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcRequestVehiclesPerGrn">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per green</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcImplementAction">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="8"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="dark"/>
+					<xs:enumeration value="restInGreen"/>
+					<xs:enumeration value="fixedRate"/>
+					<xs:enumeration value="trafficResponsive"/>
+					<xs:enumeration value="emergencyGreen"/>
+					<xs:enumeration value="holdMeter"/>
+					<xs:enumeration value="holdNonMeter"/>
+					<xs:enumeration value="holdRestInGreen"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcImplementPlan">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcImplementRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcImplementVehiclesPerGrn">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per green</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBActionCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="6"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="dark"/>
+					<xs:enumeration value="restInGreen"/>
+					<xs:enumeration value="fixedRate"/>
+					<xs:enumeration value="trafficResponsive"/>
+					<xs:enumeration value="emergencyGreen"/>
+					<xs:enumeration value="skip"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBPlanCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBRateCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBVehiclesPerGrnCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>qty</valueDomainTerm>
+				<units>vehicles</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBCMinMeterRateCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBCMaxMeterRateCtrl">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcTBMLUsageMode">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:unsignedByte">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="8"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="notUsed"/>
+					<xs:enumeration value="schemeF"/>
+					<xs:enumeration value="schemeO"/>
+					<xs:enumeration value="schemeFO"/>
+					<xs:enumeration value="schemeS"/>
+					<xs:enumeration value="schemeFS"/>
+					<xs:enumeration value="schemeOS"/>
+					<xs:enumeration value="schemeFOS"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="insert-extension-values-here"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RmcActionNum">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RmcMeteringLevel">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>id</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcMeteringRate">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcFlowRateThreshold">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>vehicles per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcOccupancyThreshold">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>pct</valueDomainTerm>
+				<units>tenth of a percent</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedShort"/>
+	</xs:simpleType>
+	<xs:simpleType name="RmcSpeedThreshold">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>RampMeter</objectClass>
+				<valueDomainTerm>rt</valueDomainTerm>
+				<units>kilometers per hour</units>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte"/>
+	</xs:simpleType>
+	<!-- NTCIP 1209 v02.17b -->
+	<xs:simpleType name="SensorZoneOutputMode">
+		<xs:annotation>
+			<xs:documentation>
+				<objectClass>Detector</objectClass>
+				<valueDomainTerm>cd</valueDomainTerm>
+				<units/>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedByte">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- END of the output -->
+</xs:schema>
