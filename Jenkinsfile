@@ -47,7 +47,6 @@ def deployTo(params = [:]) {
     scos.withEksCredentials(environment) {
         sh("""#!/bin/bash
             set -e
-            helm init --client-only
             helm upgrade --install soap-to-rest ./chart \
                 --namespace=external-services \
                 --values=soap-to-rest.yaml \
